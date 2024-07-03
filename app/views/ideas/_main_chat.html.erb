@@ -10,17 +10,17 @@
 </div>
 
 <div id="comments" class="messages">
-  <%= render partial: 'message', collection: @ideas %>
+  <%= render partial: 'message', collection: @ideas, as: :idea %>
 </div>
 
 <%= form_with model: [@room, @idea], html: {class: "form", id:"message-form"}, local: true do |f|%>
   <div id="current-user" data-id="<%= current_user.id %>"></div>
   <div class="form-input">
     <%= f.text_field :content, class: 'form-message', placeholder: 'type a message' %>
-    <label class="form-image">
+    <!--<label class="form-image">
       <span class="image-file">画像</span>
       <%= f.file_field :image, class: 'hidden' %>
-    </label>
+    </label>-->
   </div>
   <%= f.submit '送信', class: 'form-submit' %>
 <% end %>
