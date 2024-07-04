@@ -24,8 +24,9 @@
 .create-room_sub {
   font-size: 18px;
   box-shadow: 2px 2px 4px rgb(102, 61, 61);
-  padding: 10px;
+  padding: 20px ;
   background-color: darkred;
+  margin-top: 0px;
 }
 
 .room-names {
@@ -47,7 +48,7 @@
 }
 .chat-header {
   background-color: #f3e3c0;
-  width: 92vw;
+  width: 82vw;
   height: 100px;
 }
 
