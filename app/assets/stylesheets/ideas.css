@@ -1,5 +1,6 @@
 .wrapper {
   display: flex;
+  background-color: #e0eaec;
 }
 .side-bar {
   background-color: #f5dc8b;
@@ -13,20 +14,31 @@
 .rooms {
   background-color: #caac94;
   height: calc(100vh - 100px);
-  padding: 0 20px;
   overflow: scroll;
 }
 
 .room {
-  padding: 40px 0 40px;
+  padding: 28px 0 0 0;
 }
 
-.create-room a {
+.create-room_sub {
+  font-size: 18px;
+  box-shadow: 2px 2px 4px rgb(102, 61, 61);
+  padding: 10px;
+  background-color: darkred;
+}
+
+.room-names {
+  padding: 0 20px;
+}
+
+.room a {
   font-size: 13px;
   border: 3px solid darkred;
   padding: 10px;
   color: darkred;
   text-decoration: none;
+  background-color: rgb(243, 162, 162);
 }
 
 .chat {
@@ -34,6 +46,8 @@
   width: 82vw;
 }
 .chat-header {
+  background-color: #f3e3c0;
+  width: 92vw;
   height: 100px;
 }
 
@@ -170,3 +184,8 @@
   text-decoration: none;
 }
 
+.btn2 {
+  color: #ffffff;
+  font-size: 20px;
+  text-decoration: none;
+}

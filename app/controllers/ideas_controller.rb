@@ -1,6 +1,6 @@
 class IdeasController < ApplicationController
   def index
-    @rooms = Room.all
+    @rooms = current_user.rooms
     @idea = Idea.new
     @room = Room.find(params[:room_id])
     @ideas = @room.ideas.includes(:user)
