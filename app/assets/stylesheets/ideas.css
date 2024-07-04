@@ -13,7 +13,22 @@
 .rooms {
   background-color: #caac94;
   height: calc(100vh - 100px);
+  padding: 0 20px;
+  overflow: scroll;
 }
+
+.room {
+  padding: 40px 0 40px;
+}
+
+.create-room a {
+  font-size: 13px;
+  border: 3px solid darkred;
+  padding: 10px;
+  color: darkred;
+  text-decoration: none;
+}
+
 .chat {
   background-color: #f3e3c0;
   width: 82vw;
@@ -40,12 +55,13 @@
 }
 
 .message_me {
-  width: 400px;
-  margin: 15px 0;
+
+  margin: 10px 0;
   background-color: lightblue;
   float: left;
   clear: both;
   border-radius: 20px;
+  box-shadow: 5px 6px 19px rgba(0,0,0,0.25);
 }
 
 .message_other {
@@ -63,9 +79,9 @@
 }
 
 .message-user {
-  height: 20px;
+  height: 28px;
   font-size: 20px;
-  font-weight: 16px;
+  font-weight: bold;
   color: #434a54;
   margin-left: 20px;
 }
@@ -79,19 +95,19 @@
 
 .message-date {
   text-align: right;
-  margin-right: 20px;
+  margin: 0 20px 0 40px;
   font-weight: 12px;
   color: #999;
+  font-size: 13px;
 }
 .lower-message {
-  margin-top: 10px;
   object-fit: cover;
 }
 .message-content {
   font-weight: 17px;
   font-size: 19px;
   color: #434a54;
-  margin: 20px 20px 30px 20px;
+  margin: 8px 20px 8px 20px;
 }
 
 .message-images {
@@ -153,3 +169,4 @@
   font-size: 25px;
   text-decoration: none;
 }
+
