@@ -1,5 +1,4 @@
 
-
 <!-- マップを表示する要素 -->
 <div id="map" class="maps"></div>
 
@@ -21,8 +20,14 @@
     map,
     position: center,
   };
-  //解説1：マーカーを生成するMarkerクラス
+  // マーカーを生成するMarkerクラス
   var marker = new google.maps.Marker(markerOptions);
+
+  marker.setOptions({
+    icon: { 
+      url: '/img/orange-circle.png'
+    }
+  });
 }
 
 
