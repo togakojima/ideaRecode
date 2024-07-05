@@ -4,12 +4,13 @@
 }
 .side-bar {
   background-color: #f5dc8b;
-  width: 18vw;
+  width: 290px;
   height: 100vh;
 }
 
 .side-bar-header {
   height: 100px;
+  padding: 25px 0 0 15px;
 }
 .rooms {
   background-color: #caac94;
@@ -29,13 +30,21 @@
   margin-top: 0px;
 }
 
+.logo-room a {
+  margin: 8px 30px 0 8px;
+  box-shadow: 2px 2px 4px rgb(102, 61, 61);
+  padding: 10px ;
+  background-color: rgb(206, 154, 59);
+  margin-top: 0px;
+}
+
 .room-names {
   padding: 0 20px;
 }
 
 .room a {
   font-size: 13px;
-  border: 3px solid darkred;
+  border: 4px solid darkred;
   padding: 10px;
   color: darkred;
   text-decoration: none;
@@ -44,11 +53,11 @@
 
 .chat {
   background-color: #f3e3c0;
-  width: 82vw;
+  width: 100%;
 }
 .chat-header {
   background-color: #f3e3c0;
-  width: 82vw;
+  width: 100%;
   height: 100px;
 }
 
@@ -139,7 +148,7 @@
 
 .form {
   height: 90px;
-  background-color: #dddddd;
+  background-color: #d1a068;
   padding: 20px 40px;
   display: flex;
 }
@@ -147,21 +156,25 @@
   background-color: white;
   display: flex;
   width: 100%;
+  border-radius: 20px;
 }
 .form-message {
   border: none;
   height: 50px;
   width: 100%;
   padding-left: 10px;
+  border-radius: 15px;
+
 }
 .form-submit {
   height: 50px;
-  background-color: #38aef0;
+  background-color: #71c6f7c0;
   border: none;
   color: white;
   font-size: 16px;
   margin-left: 15px;
   padding: 0 20px;
+  border-radius: 15px;
 }
 .form-image {
   font-size: 12px;
@@ -189,4 +202,13 @@
   color: #ffffff;
   font-size: 20px;
   text-decoration: none;
+}
+
+.btn3 {
+  color: rgb(43, 88, 0);
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  box-shadow: #000000;
 }

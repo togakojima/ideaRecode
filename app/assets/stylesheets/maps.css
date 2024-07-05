@@ -1,0 +1,16 @@
+h3 {
+  letter-spacing: 2px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.maps {
+  height: 70%;
+  width: 100%;
+}
+
+.map-view {
+  height: calc(100vh - 100px - 50px);
+  background-color: #e0eaec;
+  padding: 10px;
+}
