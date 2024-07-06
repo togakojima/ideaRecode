@@ -14,3 +14,73 @@ h3 {
   background-color: #e0eaec;
   padding: 10px;
 }
+
+.map-info {
+  background-color: #caebf3;
+}
+
+.new-map {
+  display: flex;
+  justify-content: center;;
+}
+.new-map a {
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 10px;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #8fcff5;
+  border-radius: 10px;
+  box-shadow: 0px 2px 2px rgb(4, 107, 167);
+  transition: background-color 0.5s ease;
+}
+.new-map a:hover {
+  background-color: #55bbf7;
+}
+
+.map-titles {
+  overflow: scroll;
+  height: 19vh;
+  text-decoration: none;
+  border-radius: 10px;
+  padding-left: 20px;
+}
+
+.map-titles ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.map-title {
+  padding: 28px 10px;
+}
+
+.map-title a {
+  font-size: 18px;
+  padding: 10px;
+  color: rgb(0, 84, 163);
+  text-decoration: none;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 2px 2px 4px rgb(22, 136, 202);
+  transition: background-color 0.5s ease;
+}
+
+.map-title a:hover {
+  background-color: rgb(231, 244, 255);
+}
+
+.maplink {
+  text-decoration: none;
+}
+
+.maplink:hover {
+  text-decoration: underline;
+}
+
+.title-name {
+  font-size: 15px;
+  font-weight: bold;
+}

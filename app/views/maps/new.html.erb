@@ -1,0 +1,23 @@
+<div class="wrapper">
+  <div class="side-bar">
+    <%= render "ideas/side_bar" %>
+  </div>
+  <div class="chat">
+    <div class="chat-header">
+      <%= link_to "カレンダー", "#", class: 'btn' %>
+      <%= link_to "マップ", maps_path, class: 'btn' %>
+      <%= link_to current_user.nickname, user_path(current_user), class: 'btn' %>
+      <%= link_to "ログアウト", destroy_user_session_path, data: { turbo_method: :delete }, class: 'btn'%>
+    </div>
+
+    <div class='room-box'>
+      <div class='messages-room'>
+        <h3>マップ</h3>
+      </div>
+    </div>
+
+    <div class="map-view">
+      <%= render "new_map" %>
+    </div>
+  </div>
+</div>
