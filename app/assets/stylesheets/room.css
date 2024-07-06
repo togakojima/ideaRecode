@@ -44,7 +44,8 @@ li {
   line-height: 50px;
   font-weight: bold;
   text-align: left;
-  padding-left: 100px;
+  padding-left: 130px;
+  font-size: 18px;
 }
 .chat-room-form__input {
   float: left;
@@ -59,6 +60,10 @@ li {
   color: #fff;
   background-color: #38aef0;
   border: 0;
+  transition:  background-color 0.5s ease;
+}
+.chat-room-form__action-btn:hover {
+  background-color: #4acee9;
 }
 .chat-room-form__field {
   margin-top: 30px;

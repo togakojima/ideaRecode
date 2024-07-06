@@ -1,31 +1,62 @@
 
-
 <!-- マップを表示する要素 -->
 <div id="map" class="maps"></div>
 
-<script>
-  // 地図を初期化する関数
-  function initMap() {
+<div class="map-info">
+  <div class="new-map">
+    <%= link_to 'New Map!', new_map_path %>
+  </div>
 
-    const center = { lat: 35.41151123572196, lng:  136.75974330995982 };
-    // 地図のオプション
+  <div class="map-titles">
+    <ul>
+      <% @maps.each do |map| %>
+        <div class="map-title">
+          <li><%= link_to map.title, maps_path(map) %></li>
+        </div>
+      <% end %> 
+    </ul>
+  </div>
+</div>
+
+<script>
+  function initMap() {
+    const center = { lat: 35.41151123572196, lng: 136.75974330995982 };
     const mapOptions = {
-      center: center, // 地図の初期表示位置（東京）
-      zoom: 17 // ズームレベル
+      center: center,
+      zoom: 17
     };
 
-    // 地図を指定した要素に表示
     const map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
-    var markerOptions = {
-    map,
-    position: center,
-  };
-  //解説1：マーカーを生成するMarkerクラス
-  var marker = new google.maps.Marker(markerOptions);
-}
+    const maps = <%= raw @maps.to_json(only: [:latitude, :longitude, :title, :info]) %>;
 
+    let currentInfoWindow = null; // 現在開いている情報ウィンドウを保持
 
+    maps.forEach((mapData) => {
+      const lat = parseFloat(mapData.latitude);
+      const lng = parseFloat(mapData.longitude);
+      const marker = new google.maps.Marker({
+        position: { lat, lng },
+        map: map,
+        icon: { url: '/img/orange-circle.png', scaledSize : new google.maps.Size(50, 50) },
+        title: mapData.title
+      });
 
+      const infoWindow = new google.maps.InfoWindow({
+        content: `<div class="title-name">${mapData.title}</div><p>${mapData.info}</p><p><a href="https://www.google.com/maps/dir/?api=1&destination=${mapData.latitude},${mapData.longitude}" target="_blank", class="maplink">Googleマップで見る</a></p>`
+      });
+
+      marker.addListener('click', () => {
+        // 前に開いていたウィンドウがあれば閉じる
+        if (currentInfoWindow) {
+          currentInfoWindow.close();
+        }
+        // 開いたウィンドウを currentInfoWindow に保存
+        currentInfoWindow = infoWindow;
+
+        infoWindow.open(map, marker);
+      });
+    });
+  }
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV["GOOGLE_MAPS_API_KEY"] %>&callback=initMap" async defer></script>

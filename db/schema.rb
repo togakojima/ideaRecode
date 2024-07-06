@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_07_03_112242) do
+ActiveRecord::Schema[7.0].define(version: 2024_07_05_160015) do
   create_table "ideas", charset: "utf8", force: :cascade do |t|
     t.string "content"
     t.bigint "room_id", null: false
@@ -19,6 +19,17 @@ ActiveRecord::Schema[7.0].define(version: 2024_07_03_112242) do
     t.datetime "updated_at", null: false
     t.index ["room_id"], name: "index_ideas_on_room_id"
     t.index ["user_id"], name: "index_ideas_on_user_id"
+  end
+
+  create_table "maps", charset: "utf8", force: :cascade do |t|
+    t.decimal "latitude", precision: 9, scale: 6, null: false
+    t.decimal "longitude", precision: 9, scale: 6, null: false
+    t.text "info"
+    t.string "title", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_maps_on_user_id"
   end
 
   create_table "rooms", charset: "utf8", force: :cascade do |t|
@@ -44,5 +55,6 @@ ActiveRecord::Schema[7.0].define(version: 2024_07_03_112242) do
 
   add_foreign_key "ideas", "rooms"
   add_foreign_key "ideas", "users"
+  add_foreign_key "maps", "users"
   add_foreign_key "rooms", "users"
 end
