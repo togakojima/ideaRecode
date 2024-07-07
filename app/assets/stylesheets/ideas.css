@@ -99,6 +99,13 @@
   color: rgb(196, 39, 39);
 }
 
+.header-menu-sel a {
+  position: relative;
+  top: 30px;
+  font-weight: bold;
+  color: rgb(196, 39, 39);
+}
+
 .messages {
   height: calc(100vh - 100px - 90px - 50px);
   background-color: #e0eaec;

@@ -16,7 +16,7 @@
     <% @calendars.each do |calendar| %>
       <tr>
         <div class="nittei">
-          <td><%= link_to calendar.title  %></td>
+          <td><%= link_to calendar.title, calendar %></td>
           <td><%= calendar.start_time.strftime("%m-%d, %H:%M~") %></td>
         </div>
       </tr>

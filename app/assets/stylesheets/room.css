@@ -96,3 +96,14 @@ select {
   width: 100%;
 }
 
+.room-destroy {
+  float: right;
+  margin-right: 20px;
+  font-size: 20px;
+  text-decoration: none;
+  color: lightblue;
+}
+.room-destroy:hover {
+  color: rgb(3, 91, 255);
+}
+

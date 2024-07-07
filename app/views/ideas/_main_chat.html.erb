@@ -16,6 +16,7 @@
 <div class='room-box'>
   <div class='messages-room'>
     <%= @room.name %>
+    <%= link_to "ボックス削除", room_path(@room.id), data: {turbo_method: :delete}, class:"room-destroy" %>
   </div>
 </div>
 

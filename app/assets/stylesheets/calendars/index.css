@@ -12,6 +12,7 @@
 .schedule {
   font-size: 25px;
   font-weight: bold;
+  padding: 10px;
 }
 
 table {
@@ -36,6 +37,10 @@ table {
 .time-sub {
   text-align: center;
 
+}
+
+.title {
+  margin-top: 10px;
 }
 
 .form-tag {
