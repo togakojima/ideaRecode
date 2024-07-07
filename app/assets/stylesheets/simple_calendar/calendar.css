@@ -1,0 +1,18 @@
+.calendar {
+  background-color: #caebf3;
+}
+
+tbody, thead {
+  background-color: #e0eaec;
+}
+
+.calendar-heading {
+  text-align: center;
+}
+
+.calendar-view {
+  height: calc(100vh - 100px - 50px);
+  background-color: #e0eaec;
+  overflow: scroll;
+  padding: 10px;
+}

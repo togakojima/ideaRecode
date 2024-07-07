@@ -6,4 +6,5 @@ Rails.application.routes.draw do
     resources :ideas, only: [:index, :create]
   end
   resources :maps, only: [:index, :new, :create]
+  resources :calendars
 end

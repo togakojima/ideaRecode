@@ -1,6 +1,6 @@
 <div class="chat-header">
   <div class="header-menu">
-    <%= link_to "カレンダー", "#", class: 'btn' %>
+    <%= link_to "カレンダー", calendars_path(current_user), class: 'btn' %>
   </div>
   <div class="header-menu">
     <%= link_to "マップ", maps_path(current_user), class: 'btn' %>

@@ -1,14 +1,15 @@
 class IdeasController < ApplicationController
   def index
+    @room = Room.find(params[:room_id])
     @rooms = current_user.rooms
     @idea = Idea.new
-    @room = Room.find(params[:room_id])
     @ideas = @room.ideas.includes(:user)
   end
 
   def create
     @room = Room.find(params[:room_id])
     @idea = @room.ideas.new(idea_params)
+    @rooms = current_user.rooms
     if @idea.save
       redirect_to room_ideas_path(@room)
     else
