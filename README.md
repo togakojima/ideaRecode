@@ -33,6 +33,8 @@
 
 - has_many :rooms
 - has_many :ideas
+- has_many :maps
+- has_many :calendars
 
 ## rooms テーブル
 
@@ -75,7 +77,7 @@
 
 - belongs_to :user
 
-## maps テーブル
+## calendars テーブル
 
 | Column     | Type       | Options                        |
 | ---------- | ---------- | ------------------------------ |
