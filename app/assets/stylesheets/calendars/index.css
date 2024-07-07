@@ -1,0 +1,69 @@
+.toppage {
+  background-color: #caebf3;
+}
+
+.top {
+  background-color: lightskyblue;
+  width: 200px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.schedule {
+  font-size: 25px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.col-md-4 {
+  text-align: center;
+}
+
+.notice {
+  background-color: lightblue;
+}
+
+.ale {
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: bold;
+}
+
+.time-sub {
+  text-align: center;
+
+}
+
+.title {
+  margin-top: 10px;
+}
+
+.form-tag {
+  font-size: 20px;
+}
+
+.custom-title-class {
+  font-size: 20px;
+  padding: 10px;
+  width: 300px
+}
+
+.custom-content-class {
+  font-size: 20px;
+  padding: 10px;
+  width: 300px
+}
+
+.custom-time-sub-class {
+  margin-bottom: 10px; /* 時間選択部分の背景色 */
+}
+
+.custom-datetime-class {
+  font-size: 10px; /* 時間選択部分の文字色 */
+}
+

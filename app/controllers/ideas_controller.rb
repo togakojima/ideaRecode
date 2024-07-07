@@ -1,20 +1,28 @@
 class IdeasController < ApplicationController
   def index
+    @room = Room.find(params[:room_id])
     @rooms = current_user.rooms
     @idea = Idea.new
-    @room = Room.find(params[:room_id])
     @ideas = @room.ideas.includes(:user)
   end
 
   def create
     @room = Room.find(params[:room_id])
     @idea = @room.ideas.new(idea_params)
+    @rooms = current_user.rooms
     if @idea.save
       redirect_to room_ideas_path(@room)
     else
       @ideas = @room.ideas.includes(:user)
       render :index, status: :unprocessable_entity
     end
+  end
+
+  def destroy
+    @idea = Idea.find(params[:id])
+    @room = @idea.room
+    @idea.destroy
+    redirect_to room_ideas_path(@room)
   end
 
   private

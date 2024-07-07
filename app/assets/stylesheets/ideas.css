@@ -99,6 +99,13 @@
   color: rgb(196, 39, 39);
 }
 
+.header-menu-sel a {
+  position: relative;
+  top: 30px;
+  font-weight: bold;
+  color: rgb(196, 39, 39);
+}
+
 .messages {
   height: calc(100vh - 100px - 90px - 50px);
   background-color: #e0eaec;
@@ -153,6 +160,20 @@
   color: #434a54;
   text-align: right;
   margin-right: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.idea-destroy {
+  margin-right: 10px;
+  color: #999;
+  text-decoration: none;
+}
+.idea-destroy:hover {
+  color: rgb(3, 91, 255);
 }
 
 .message-date {

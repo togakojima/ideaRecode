@@ -25,7 +25,26 @@
     </div>
 
     <div class="calendar-view">
-      <%= render "calendar" %>
+      <div class="show">
+        <p>
+          <strong>タイトル</strong>
+          <%= @calendar.title %>
+        </p>
+
+        <p>
+          <strong>内容</strong>
+          <%= @calendar.content %>
+        </p>
+
+        <p>
+          <strong>日時</strong>
+          <%= @calendar.start_time.strftime("%m-%d %H:%M~") %>
+        </p>
+
+        <%= link_to '編集', edit_calendar_path(@calendar) %>
+        <%= link_to '消去',calendar_path(@calendar.id), data: {turbo_method: :delete} %>
+        <%= link_to '戻る', calendars_path %>
+      </div>
     </div>
   </div>
 </div>

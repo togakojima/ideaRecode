@@ -9,4 +9,5 @@ class User < ApplicationRecord
   has_many :rooms, dependent: :destroy
   has_many :ideas, dependent: :destroy
   has_many :maps, dependent: :destroy
+  has_many :calendars, dependent: :destroy
 end
