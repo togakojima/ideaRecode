@@ -16,7 +16,7 @@
     <% @calendars.each do |calendar| %>
       <tr>
         <div class="nittei">
-          <td><%= link_to calendar.title , calendar %></td>
+          <td><%= link_to calendar.title  %></td>
           <td><%= calendar.start_time.strftime("%m-%d, %H:%M~") %></td>
         </div>
       </tr>
@@ -30,24 +30,24 @@
 
   <div class="title">
     <div class="form-tag">タイトル</div>
-    <%= form.text_field :title %>
+    <%= form.text_field :title, class: 'custom-title-class' %>
   </div>
 
 
   <div class="content">
     <div class="form-tag">内容</div>
-    <%= form.text_field :content %>
+    <%= form.text_area :content, class: 'custom-content-class' %>
   </div>
 
-  <div class="time">
-    <div class="form-tag">時間</div>
-    <div class="time-sub">
-      <%= form.datetime_select :start_time %>
-    </div>
+  <div class="time custom-time-class">
+  <div class="form-tag custom-form-tag-class">時間</div>
+  <div class="time-sub custom-time-sub-class">
+    <%= form.datetime_select :start_time, class: 'custom-datetime-class' %>
   </div>
+</div>
 
   <div class="submit">
-    <%= form.submit %>
+    <%= form.submit class: 'custom-submit-button'%>
   </div>
 <% end %>
 </div>

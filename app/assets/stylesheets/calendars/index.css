@@ -34,6 +34,31 @@ table {
 }
 
 .time-sub {
-  text-align: left;
+  text-align: center;
+
+}
+
+.form-tag {
+  font-size: 20px;
+}
+
+.custom-title-class {
+  font-size: 20px;
+  padding: 10px;
+  width: 300px
+}
+
+.custom-content-class {
+  font-size: 20px;
+  padding: 10px;
+  width: 300px
+}
+
+.custom-time-sub-class {
+  margin-bottom: 10px; /* 時間選択部分の背景色 */
+}
+
+.custom-datetime-class {
+  font-size: 10px; /* 時間選択部分の文字色 */
 }
 

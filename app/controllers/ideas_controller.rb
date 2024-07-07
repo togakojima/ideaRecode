@@ -18,6 +18,13 @@ class IdeasController < ApplicationController
     end
   end
 
+  def destroy
+    @idea = Idea.find(params[:id])
+    @room = @idea.room
+    @idea.destroy
+    redirect_to room_ideas_path(@room)
+  end
+
   private
 
   def idea_params

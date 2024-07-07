@@ -155,6 +155,20 @@
   margin-right: 20px;
 }
 
+.container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.idea-destroy {
+  margin-right: 10px;
+  color: #999;
+  text-decoration: none;
+}
+.idea-destroy:hover {
+  color: rgb(3, 91, 255);
+}
+
 .message-date {
   text-align: right;
   margin: 0 20px 0 40px;

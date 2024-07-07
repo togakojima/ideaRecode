@@ -7,9 +7,12 @@
   <div class="lower-message">
     <div class="message-content">
       <%= idea.content %>
-    </div>   
+    </div>
+    <div class="container">
+      <%= link_to "削除", room_idea_path(@room, idea.id), data: {turbo_method: :delete}, class:"idea-destroy" %>
+    </div>
     <div class="message-date">
-      <%= l idea.created_at %>
+      <%=  idea.created_at.strftime("%Y/%m/%d %H:%M") %>
     </div>
   </div>
 </div>

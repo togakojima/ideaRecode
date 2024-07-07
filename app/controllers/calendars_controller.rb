@@ -13,12 +13,11 @@ class CalendarsController < ApplicationController
 
   def show
     @calendar = Calendar.find(params[:id])
-    @room = Room.find(params[:room_id])
     @rooms = current_user.rooms
   end
 
   def create
-    @calendar = Calendar.new(calendar_params)
+    @calendar = Calendar.create(calendar_params)
     @room = Room.find(params[:room_id])
     @rooms = current_user.rooms
     if @calendar.save
@@ -31,19 +30,18 @@ class CalendarsController < ApplicationController
   def destroy
     @calendar = Calendar.find(params[:id])
     @calendar.destroy
-    redirect_to calendars_path, notice: '削除しました。'
+    redirect_to calendars_path
   end
 
   def edit
     @calendar = Calendar.find(params[:id])
-    @room = Room.find(params[:room_id])
     @rooms = current_user.rooms
   end
 
   def update
     @calendar = Calendar.find(params[:id])
     if @calendar.update(calendar_params)
-      redirect_to calendars_path, notice: '編集しました。'
+      redirect_to calendars_path
     else
       render :edit
     end
