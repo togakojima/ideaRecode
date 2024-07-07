@@ -3,17 +3,30 @@
 }
 
 tbody, thead {
-  background-color: #e0eaec;
+  background-color: #f2fdff;
   text-decoration: none;
 }
 
-tbody, thead a{
+.custom-title {
   font-size: 15px;
-
+  padding: 10px;
+  width: 300px;
+  text-decoration: none;
+}
+.custom-title:hover {
+  text-decoration: underline;
 }
 
 .calendar-heading {
   text-align: center;
+}
+
+.calendar-heading a{
+  text-decoration: none;
+  color: blue;
+}
+.calendar-heading a:hover {
+  text-decoration: underline;
 }
 
 .calendar-view {

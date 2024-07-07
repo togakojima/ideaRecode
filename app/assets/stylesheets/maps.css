@@ -21,7 +21,8 @@ h3 {
 
 .new-map {
   display: flex;
-  justify-content: center;;
+  justify-content: center;
+  padding-top: 10px;
 }
 .new-map a {
   text-align: center;
@@ -41,7 +42,7 @@ h3 {
 
 .map-titles {
   overflow: scroll;
-  height: 19vh;
+  height: 18vh;
   text-decoration: none;
   border-radius: 10px;
   padding-left: 20px;
@@ -83,4 +84,30 @@ h3 {
 .title-name {
   font-size: 15px;
   font-weight: bold;
+}
+
+.map-information {
+  text-align: center;
+  line-height: 50px;
+  padding-top: 10px;
+  background-color: #caebf3;
+  height: 25vh;
+}
+
+.map-title-new {
+  font-weight: bold;
+  font-size: 20px;
+}
+.map-title-new #title{
+  font-size: 20px;
+  width: 40vw;
+}
+.map-text-new {
+  font-weight: bold;
+  font-size: 20px;
+}
+.map-text-new #info{
+  font-size: 15px;
+  width: 40vw;
+  height: 8vh;
 }

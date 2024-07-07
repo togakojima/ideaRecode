@@ -1,27 +1,29 @@
 <!-- マップを表示する要素 -->
 <div id="map" class="maps"></div>
 
+<div class="map-information">
 <%= form_with model: @map, local: true do |form| %>
-  <div>
+  <div style="display: none;">
     <%= form.label :latitude, "Latitude" %>
     <%= form.text_field :latitude, id: "latitude", readonly: true %>
-  </div>
-  <div>
+</div>
+<div style="display: none;">
     <%= form.label :longitude, "Longitude" %>
     <%= form.text_field :longitude, id: "longitude", readonly: true %>
-  </div>
-  <div>
+</div>
+  <div class="map-title-new">
     <%= form.label :title, "タイトル" %>
     <%= form.text_field :title, id: "title", required: true %>
   </div>
-  <div>
+  <div class="map-text-new">
     <%= form.label :info, "補足メモ" %>
     <%= form.text_area :info, id: "info" %>
   </div>
   <div>
-    <%= form.submit "記録する" %>
+    <%= form.submit "記録する", class: 'custom-submit-button' %>
   </div>
 <% end %>
+</div>
 
 
 <script>
