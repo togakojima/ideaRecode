@@ -79,3 +79,4 @@ group :production do
 end
 
 gem 'dotenv-rails'
+gem 'simple_calendar', '~> 2.0'

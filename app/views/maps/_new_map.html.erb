@@ -33,6 +33,13 @@
 
   function initMap(){
     myLatLng = {lat: 35.41151123572196, lng:  136.75974330995982}
+    styles = [
+      {
+        stylers: [{
+          saturation: -25
+        }]
+      }
+    ];
     marker = new google.maps.Marker({
         map: map,
         icon: { url: '/img/orange-circle.png',
@@ -43,7 +50,8 @@
     map_lng = document.getElementById('longitude')
     map = new google.maps.Map(document.getElementById('map'), {
     center: myLatLng,
-    zoom: 17
+    zoom: 17,
+    styles: styles
   });
 
   google.maps.event.addListener(map, 'click', mylistener);
@@ -69,37 +77,3 @@ function deleteMarker(){
 
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV["GOOGLE_MAPS_API_KEY"] %>&callback=initMap" async defer></script>
-
-
-<!-- 地図を初期化する関数
-  function initMap() {
-
-    const center = { lat: 35.41151123572196, lng:  136.75974330995982 };
-    // 地図のオプション
-    const mapOptions = {
-      center: center,
-      zoom: 17 // ズームレベル
-    };
-
-    // 地図を指定した要素に表示
-    const map = new google.maps.Map(document.getElementById('map'), mapOptions);
-
-    let marker;
-
-    map.addListener('click', (e) => {
-      if (marker) {
-        marker.setMap(null); 
-      }
-      
-      marker = new google.maps.Marker({
-        position: e.latLng,
-        map: map,
-        icon: { url: '/img/orange-circle.png',
-                scaledSize : new google.maps.Size(50, 50)
-        }
-      });
-
-      document.getElementById('latitude').value = e.latLng.lat();
-      document.getElementById('longitude').value = e.latLng.lng();
-    });
-  } -->

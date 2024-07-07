@@ -21,9 +21,18 @@
 <script>
   function initMap() {
     const center = { lat: 35.41151123572196, lng: 136.75974330995982 };
+
+    const styles = [
+      {
+        stylers: [{
+          saturation: -25
+        }]
+      }
+    ];
     const mapOptions = {
       center: center,
-      zoom: 17
+      zoom: 17,
+      styles: styles
     };
 
     const map = new google.maps.Map(document.getElementById('map'), mapOptions);
@@ -43,7 +52,7 @@
       });
 
       const infoWindow = new google.maps.InfoWindow({
-        content: `<div class="title-name">${mapData.title}</div><p>${mapData.info}</p><p><a href="https://www.google.com/maps/dir/?api=1&destination=${mapData.latitude},${mapData.longitude}" target="_blank", class="maplink">Googleマップで見る</a></p>`
+        content: `<div class="title-name">${mapData.title}</div><p>${mapData.info}</p><p><a href="https://www.google.com/maps/dir/?api=1&destination=${mapData.latitude},${mapData.longitude}" target="_blank", class="maplink">ルート検索</a></p>`
       });
 
       marker.addListener('click', () => {
