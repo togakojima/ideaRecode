@@ -11,7 +11,9 @@
     <ul>
       <% @maps.each do |map| %>
         <div class="map-title">
-          <li><%= link_to map.title, maps_path(map) %></li>
+          <%= link_to map.title, "#", 
+              class: "map-link", 
+              data: { lat: map.latitude, lng: map.longitude } %>
         </div>
       <% end %> 
     </ul>
@@ -64,6 +66,18 @@
         currentInfoWindow = infoWindow;
 
         infoWindow.open(map, marker);
+      });
+    });
+
+     // マップリンクにイベント付与
+    document.querySelectorAll('.map-link').forEach((link) => {
+      link.addEventListener('click', (event) => {
+        const lat = parseFloat(event.target.dataset.lat);
+        const lng = parseFloat(event.target.dataset.lng);
+
+        map.setCenter(new google.maps.LatLng(lat, lng));
+
+        event.preventDefault();
       });
     });
   }
