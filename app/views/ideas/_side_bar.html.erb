@@ -5,12 +5,13 @@
   </div> 
 </div>
 
+
+<div class="create-room_sub">
+    <%= link_to "ボックスを作成する", new_room_path, class: 'btn2' %>
+</div>
+
 <div class="rooms">
   <div class="create-room">
-    <div class="create-room_sub">
-    <%= link_to "ボックスを作成する", new_room_path, class: 'btn2' %>
-    </div>
-
     <div class="room-names">
       <% @rooms.each do |room| %>
         <div class="room">

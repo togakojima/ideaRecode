@@ -4,7 +4,7 @@
 }
 .side-bar {
   background-color: #f5dc8b;
-  width: 290px;
+  width: 250px;
   height: 100vh;
 }
 
@@ -14,17 +14,20 @@
 }
 .rooms {
   background-color: #caac94;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 100px - 70px);
+  overflow: hidden;
+  width: 100%;
   overflow: scroll;
 }
 
 .create-room_sub {
+  height: 70px;
   font-size: 18px;
-  box-shadow: 2px 2px 4px rgb(102, 61, 61);
   padding: 20px ;
   background-color: darkred;
   margin-top: 0px;
   transition: background-color 0.5s ease;
+  text-align: center;
 }
 
 .create-room_sub:hover {
@@ -54,10 +57,12 @@
 
 .room-names {
   padding: 0 20px;
+  white-space: nowrap;
 }
 
 .room {
   padding: 28px 0 0 0;
+
 }
 
 .room a {
@@ -76,15 +81,21 @@
 }
 
 .chat {
-  background-color: #f3e3c0;
+  background-color: #f7dfad;
   width: 100%;
 }
 .chat-header {
   display: flex;
   justify-content: space-around; 
-  background-color: #f3e3c0;
+  background-color: #f7dfad;
   width: 100%;
-  height: 100px; 
+  height: 100px;
+  box-shadow: 5px 6px 10px rgba(0,0,0,0.25);
+}
+
+.chat-main {
+  background-color: #e0eaec;
+  height: calc(100vh - 100px);
 }
 
 .header-menu a {
@@ -207,23 +218,22 @@
 
 .form {
   height: 90px;
-  background-color: #f3e3c0;
+  background-color: #f7dfad;
   padding: 20px 40px;
   display: flex;
 }
-.form-input {
-  background-color: white;
-  display: flex;
+.form-input {  
   width: 100%;
   border-radius: 20px;
 }
 .form-message {
+  background-color: rgb(255, 248, 228);
   border: none;
   height: 50px;
   width: 100%;
   padding-left: 10px;
   border-radius: 15px;
-  font-size: 20px;
+  font-size: 25px;
 }
 .form-submit {
   height: 50px;

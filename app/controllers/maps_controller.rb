@@ -1,4 +1,6 @@
 class MapsController < ApplicationController
+  before_action :authenticate_user!, only: [:index, :new, :create]
+
   def index
     @rooms = current_user.rooms
     @maps = current_user.maps

@@ -1,9 +1,15 @@
 class IdeasController < ApplicationController
+  before_action :authenticate_user!, only: [:index, :create, :destroy]
+
   def index
-    @room = Room.find(params[:room_id])
-    @rooms = current_user.rooms
-    @idea = Idea.new
-    @ideas = @room.ideas.includes(:user)
+    @room = Room.find_by(id: params[:room_id])
+    if @room.nil?
+      redirect_to root_path
+    else
+      @rooms = current_user.rooms
+      @idea = Idea.new
+      @ideas = @room.ideas.includes(:user)
+    end
   end
 
   def create
