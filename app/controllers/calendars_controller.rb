@@ -7,7 +7,7 @@ class CalendarsController < ApplicationController
     @calendar = Calendar.new
     @rooms = current_user.rooms
   end
-  
+
   def new
     @calendar = Calendar.new
     @room = Room.find(params[:room_id])
@@ -17,9 +17,6 @@ class CalendarsController < ApplicationController
   def show
     @rooms = current_user.rooms
     @calendar = Calendar.find_by(id: params[:id])
-    if @calendar.blank?
-      redirect_to calendars_path
-    end
   end
 
   def create
