@@ -1,4 +1,7 @@
 class CalendarsController < ApplicationController
+  before_action :set_item, only: [:edit, :update, :destroy]
+  before_action :authenticate_user!
+
   def index
     @calendars = current_user.calendars
     @calendar = Calendar.new
@@ -31,18 +34,15 @@ class CalendarsController < ApplicationController
   end
 
   def destroy
-    @calendar = Calendar.find(params[:id])
     @calendar.destroy
     redirect_to calendars_path
   end
 
   def edit
-    @calendar = Calendar.find(params[:id])
     @rooms = current_user.rooms
   end
 
   def update
-    @calendar = Calendar.find(params[:id])
     if @calendar.update(calendar_params)
       redirect_to calendars_path
     else
@@ -51,6 +51,10 @@ class CalendarsController < ApplicationController
   end
 
   private
+
+  def set_item
+    @calendar = Calendar.find(params[:id])
+  end
 
   def calendar_params
     params.require(:calendar).permit(:title, :content, :start_time).merge(user_id: current_user.id)
