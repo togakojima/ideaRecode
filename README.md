@@ -117,5 +117,6 @@ https://idearecode.onrender.com
 - belongs_to :user
 
 # 画面遷移図
-![ideaRecode_遷移図](https://github.com/togakojima/ideaRecode/assets/169892668/cd76552d-74f1-42b4-b5ae-2d6a778c4e42)
+![ideaRecode_遷移図2](https://github.com/togakojima/ideaRecode/assets/169892668/04f6c4e4-2715-4571-a890-044b300dc3a6)
+
 
